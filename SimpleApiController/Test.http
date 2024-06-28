@@ -1,0 +1,22 @@
+@HostAddress = http://localhost:5142
+
+### Get all products
+GET {{HostAddress}}/products
+Accept: application/json
+
+### Get Product 2
+GET {{HostAddress}}/products/2
+Accept: application/json
+
+### Trigger 'Not Found'
+GET {{HostAddress}}/products/1000
+Accept: application/json
+
+### Create a product
+POST {{HostAddress}}/products
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Product X"
+}
